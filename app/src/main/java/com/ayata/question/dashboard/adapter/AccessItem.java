@@ -1,4 +1,4 @@
-package com.ayata.question;
+package com.ayata.question.dashboard.adapter;
 
 public class AccessItem {
 

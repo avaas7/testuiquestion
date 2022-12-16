@@ -1,4 +1,4 @@
-package com.ayata.question;
+package com.ayata.question.dashboard.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
+import com.ayata.question.R;
 
 import java.util.ArrayList;
 
