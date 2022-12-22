@@ -8,12 +8,14 @@ import androidx.lifecycle.ViewModelProviders;
 import android.app.AlertDialog;
 import android.app.DownloadManager;
 import android.app.ProgressDialog;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
 import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -106,12 +108,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onChanged(Integer integer) {
                 if (integer==View.VISIBLE) {
+                  //  progressBar.setVisibility(View.VISIBLE);
                     alertDialog.show();
                     answerFound(false);
                 }
                 else
                 {
-                    alertDialog.dismiss();
+                 // progressBar.setVisibility(View.INVISIBLE);
+                   alertDialog.dismiss();
                     answerFound(true);
                 }
             }
@@ -133,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
             messageAns = "";
             binding.tvAnswer2.setText("");
             messageAns = modelChat.getMessage().toString().trim();
-            binding.tvAnswer2.setCharacterDelay(150);
+            binding.tvAnswer2.setCharacterDelay(50);
             binding.tvAnswer2.animateText(messageAns);
         }
     }
@@ -147,5 +151,10 @@ public class MainActivity extends AppCompatActivity {
     private void  createLoadingDialog() {
         loadingDialog = new LoadingDialog(this);
         alertDialog = loadingDialog.createLoadingDialog();
+        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+    }
+
+    public void clearText(View view) {
+        binding.etAskQuesiton.getEditText().setText("");
     }
 }

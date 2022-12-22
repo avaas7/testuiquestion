@@ -47,5 +47,10 @@ public class Typewriter extends androidx.appcompat.widget.AppCompatTextView {
         myDelay = m;
     }
 
+    /*
+
+
+     */
+
 }
 

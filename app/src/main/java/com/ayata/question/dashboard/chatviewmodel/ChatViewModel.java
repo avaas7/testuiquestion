@@ -25,6 +25,8 @@ import retrofit2.Response;
 public class ChatViewModel extends AndroidViewModel {
 
 
+
+
     private ApiService chatApi;
     private MutableLiveData<ModelChat> modelChat;
     private MutableLiveData<Integer> progressBarVisibility = new MutableLiveData<>();

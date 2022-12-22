@@ -27,11 +27,5 @@ public class DialogHelper {
 
     }
 
-    public void dismissDialog()
-    {
-        if(!alertDialog.isShowing())
-        alertDialog.dismiss();
-    }
-
 
 }
